@@ -148,7 +148,6 @@ COND_COLORS = {c: PALETTE[i % len(PALETTE)]
 
 # sidebar filter
 with st.sidebar:
-    st.markdown("## 🏥 Healthcare\nAnalytics")
     st.markdown("---")
     st.markdown("**Filters**")
 
