@@ -195,7 +195,7 @@ if fdf.empty:
 # header
 st.markdown(
     "<h1 style='font-family:DM Serif Display,serif;color:#0f172a;margin-bottom:0'>Patient Analytics Dashboard</h1>"
-    "<p style='color:#64748b;font-size:0.9rem;margin-top:4px'>Interactive overview of hospital admissions, billing & outcomes</p>",
+    "<p style='color:#64748b;font-size:0.9rem;margin-top:4px'>Interactive overview of hospital admissions, billing & length of stay</p>",
     unsafe_allow_html=True,
 )
 st.markdown("---")
@@ -397,7 +397,7 @@ st.plotly_chart(fig_stacked, use_container_width=True)
 
 
 # filtered data table
-with st.expander("View Filtered Patient Records"):
+with st.expander("View Patient Records"):
     show_cols = ["Age", "Gender", "Medical Condition", "Admission Type",
                  "Hospital", "Billing Amount", "Length of Stay", "Test Results"]
     st.dataframe(
