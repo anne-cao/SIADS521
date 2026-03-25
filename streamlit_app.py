@@ -202,7 +202,7 @@ st.markdown("---")
 
 
 # kpi
-k1, k2, k3, k4, k5 = st.columns(5)
+k1, k2, k3 = st.columns(3)
 
 def kpi(col, label, value, delta=None):
     delta_html = f"<div class='kpi-delta'>{delta}</div>" if delta else ""
@@ -217,8 +217,7 @@ def kpi(col, label, value, delta=None):
 kpi(k1, "Total Patients",     f"{len(fdf):,}")
 kpi(k2, "Avg Billing",        f"${fdf['Billing Amount'].mean():,.0f}")
 kpi(k3, "Avg Length of Stay", f"{fdf['Length of Stay'].mean():.1f} days")
-kpi(k4, "Abnormal Results",   f"{(fdf['Test Results']=='Abnormal').mean()*100:.1f}%")
-kpi(k5, "Emergency Admits",   f"{(fdf['Admission Type']=='Emergency').mean()*100:.1f}%")
+
 
 st.markdown("<br>", unsafe_allow_html=True)
 
